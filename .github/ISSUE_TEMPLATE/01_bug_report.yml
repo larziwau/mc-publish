@@ -70,10 +70,8 @@ body:
             permissions:
               contents: write
             steps:
-              # Build artifacts...
-
-              - name: Publish assets to GitHub, Modrinth, and CurseForge
-                uses: Kir-Antipov/mc-publish@v4.0
+              - name: Publish Minecraft mod
+                uses: Kir-Antipov/mc-publish@v3
                 with:
                   name: ""
                   modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
@@ -89,7 +87,7 @@ body:
       label: Logs
       description: Copy and paste the relevant logs, if applicable.
       placeholder: |
-        Run Kir-Antipov/mc-publish@v4.0
+        Run Kir-Antipov/mc-publish@v3
         with:
           modrinth-id: AAAAAAAA
           modrinth-token: ***
