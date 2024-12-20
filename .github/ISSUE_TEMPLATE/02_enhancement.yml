@@ -1,7 +1,8 @@
 name: Enhancement
 description: Suggest an enhancement for an existing feature.
 title: "[Enhancement] "
-labels: ["enhancement"]
+labels:
+  - "enhancement"
 body:
   - type: textarea
     id: current-behavior
