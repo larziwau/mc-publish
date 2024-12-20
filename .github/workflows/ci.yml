@@ -1,22 +1,28 @@
-name: ci
+name: CI
 
-on: [ push, pull_request ]
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v4
-    - name: Set up Node.js v16
-      uses: actions/setup-node@v4
-      with:
-        node-version: 16
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Set up node modules
-      run: npm ci
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts'
 
-    - name: Build artifacts
-      run: npm run build
+      - name: Install Node modules
+        run: npm ci
 
-    - name: Execute tests
-      run: npm run test
+      - name: Build artifacts
+        run: npm run build
+
+      - name: Run tests
+        run: npm run test
