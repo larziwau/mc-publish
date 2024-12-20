@@ -42,6 +42,5 @@ export {
 
 export {
     RawFabricMetadata,
-
     FABRIC_MOD_JSON,
 } from "./raw-fabric-metadata";
