@@ -17,6 +17,5 @@ export {
 export {
     MojangApiClient,
     MojangApiOptions,
-
     MOJANG_API_URL,
 } from "./mojang-api-client";
