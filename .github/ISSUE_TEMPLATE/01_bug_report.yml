@@ -1,7 +1,8 @@
 name: Bug report
 description: Submit a bug report to help us improve.
 title: "[Bug] "
-labels: ["bug"]
+labels:
+  - "Bug"
 body:
   - type: textarea
     id: description
